@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ختمة القرآن - حصن المسلم</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Reem+Kufi:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Amiri', 'Reem Kufi', 'Scheherazade New', sans-serif;
+            background: #f8f9fa;
+            color: #222;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            /* اجعل الاتجاه من اليمين لليسار */
+        }
+
+        .dark-mode {
+            background: #121212;
+            color: white;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            z-index: 1000;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            color: gold;
+            margin: 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links .active {
+            color: gold;
+        }
+
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+
+        #theme-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            display: inline-block;
+        }
+
+        .content {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        .content h2 {
+            padding-top: 60px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            justify-items: baseline;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .dark-mode .card {
+            background: rgba(20, 20, 20, 0.7);
+            color: white;
+        }
+
+        .dark-mode .header {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        /* تحسين استجابة صفحة ختمة القرآن */
+        @media (max-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .card {
+                width: 90%;
+                max-width: 300px;
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+            }
+
+            .card {
+                font-size: 1rem;
+                width: 80%;
+                margin: auto;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+                display: block;
+            }
+
+            .nav-links {
+                flex-direction: row;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .grid-container {
+                padding: 10px;
+            }
+
+            .card {
+                font-size: 0.9rem;
+                width: 90%;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>حصن المسلم</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="prayer-times.html">مواقيت الصلاة</a></li>
+                    <li><a href="azkar.html">الأذكار</a></li>
+                    <li><a href="khatma.html" class="active">ختمة القرآن</a></li>
+                    <li><a href="drive-file.html"> نوت بوك </a></li>
+                    <button id="theme-toggle">🌙</button>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <section class="content">
+        <h2> خطة ختمة القرآن في 30 يوم📖</h2>
+        <div class="grid-container">
+            <script>
+                const khatmaPlan = [
+                    "اليوم الأول: الفاتحة - البقرة (آية 141)",
+                    "اليوم الثاني: البقرة (آية 142) - البقرة (آية 252)",
+                    "اليوم الثالث: البقرة (آية 253) - آل عمران (آية 92)",
+                    "اليوم الرابع: آل عمران (آية 93) - النساء (آية 23)",
+                    "اليوم الخامس: النساء (آية 24) - النساء (نهاية السورة)",
+                    "اليوم السادس: المائدة - الأنعام (آية 110)",
+                    "اليوم السابع: الأنعام (آية 111) - التوبة (آية 92)",
+                    "اليوم الثامن: التوبة (آية 93) - هود (آية 5)",
+                    "اليوم التاسع: هود (آية 6) - يوسف (نهاية السورة)",
+                    "اليوم العاشر: الرعد - النحل (آية 50)",
+                    "اليوم الحادي عشر: النحل (آية 51) - طه (نهاية السورة)",
+                    "اليوم الثاني عشر: الأنبياء - المؤمنون (آية 74)",
+                    "اليوم الثالث عشر: المؤمنون (آية 75) - الأحزاب (آية 30)",
+                    "اليوم الرابع عشر: الأحزاب (آية 31) - يس (نهاية السورة)",
+                    "اليوم الخامس عشر: الصافات - فصلت (آية 46)",
+                    "اليوم السادس عشر: فصلت (آية 47) - الأحقاف (نهاية السورة)",
+                    "اليوم السابع عشر: محمد - الذاريات (نهاية السورة)",
+                    "اليوم الثامن عشر: الطور - الحديد (نهاية السورة)",
+                    "اليوم التاسع عشر: المجادلة - التحريم (نهاية السورة)",
+                    "اليوم العشرون: الملك - المرسلات (نهاية السورة)",
+                    "اليوم الحادي والعشرون: النبأ - الناس (نهاية المصحف)"
+                ];
+
+                for (let i = 0; i < khatmaPlan.length; i++) {
+                    document.write(`
+                        <div class="card">
+                            <h3>${khatmaPlan[i].split(":")[0]}</h3>
+                            <p>${khatmaPlan[i].split(":")[1]}</p>
+                        </div>
+                    `);
+                }
+            </script>
+        </div>
+    </section>
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+        themeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+        });
+        window.onload = () => {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درايف فايل - حصن المسلم </title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Reem+Kufi:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* استايل عام */
+        body {
+            font-family: 'Amiri', 'Reem Kufi', 'Scheherazade New', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            /* توسيط أفقي */
+            align-items: center;
+            /* توسيط عمودي */
+            height: 100vh;
+            /* جعل الصفحة بطول الشاشة */
+
+        }
+
+        /* وضع الداكن */
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+
+        /* الهيدر */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            z-index: 1000;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+
+        /* زر الوضع الليلي */
+        #theme-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            display: inline-block;
+        }
+
+        body.dark-mode .theme-toggle {
+            background: white;
+            color: black;
+        }
+
+        .box {
+
+            background-color: #1ab012;
+            color: rgb(216, 214, 210);
+            width: 8rem;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+
+        }
+
+        .box a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .box button {
+            padding: 13px;
+            background-color: #1ab012;
+            color: rgb(216, 214, 210);
+            width: 18rem;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<header class="header">
+    <div class="container">
+        <div class="logo">حصن المسلم</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="prayer-times.html">مواقيت الصلاة</a></li>
+                <li><a href="azkar.html">الأذكار</a></li>
+                <li><a href="quran-tracker.html">ختمة القرآن</a></li>
+                <li><a href="drive-file.html"> نوت بوك </a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle">🌓</button>
+    </div>
+</header>
+<div class="box">
+    <button><a href="https://drive.google.com/file/d/1boXJNtbO-lCm1vK4kH63KVrwhhTwCxRJ/view?usp=drivesdk"
+            target="_blank">جدول لتنظيم شهر رمضان المبارك</a></button>
+</div>
+
+<script>
+    const themeToggle = document.getElementById("theme-toggle");
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    });
+    function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+        let isDark = document.body.classList.contains("dark-mode");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+        updateButton();
+    }
+
+    function checkTheme() {
+        let theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+            document.body.classList.add("dark-mode");
+        }
+        updateButton();
+    }
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+            themeToggle.textContent = '☀️';
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+            themeToggle.textContent = '🌙';
+        }
+    });
+</script>
+
+</html>

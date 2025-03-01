@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مواقيت الصلاة - حصن المسلم</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Reem+Kufi:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- الهيدر الموحد -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">حصن المسلم</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="prayer-times.html">مواقيت الصلاة</a></li>
+                    <li><a href="azkar.html">الأذكار</a></li>
+                    <li><a href="quran-tracker.html">ختمة القرآن</a></li>
+                    <li><a href="drive-file.html"> نوت بوك </a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle">🌓</button>
+        </div>
+    </header>
+
+    <!-- تفريغ مساحة للهيدر المثبت -->
+    <div class="spacer"></div>
+
+    <!-- قسم المواقيت -->
+    <section class="prayer-times">
+        <h2>مواقيت الصلاة في القاهرة</h2>
+        <div class="prayer-cards">
+            <div class="prayer-card">
+                <h3>الفجر</h3>
+                <p id="fajr-time">جارٍ التحميل...</p>
+            </div>
+            <div class="prayer-card">
+                <h3>الظهر</h3>
+                <p id="dhuhr-time">جارٍ التحميل...</p>
+            </div>
+            <div class="prayer-card">
+                <h3>العصر</h3>
+                <p id="asr-time">جارٍ التحميل...</p>
+            </div>
+            <div class="prayer-card">
+                <h3>المغرب</h3>
+                <p id="maghrib-time">جارٍ التحميل...</p>
+            </div>
+            <div class="prayer-card">
+                <h3>العشاء</h3>
+                <p id="isha-time">جارٍ التحميل...</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const prayerTimes = {
+                fajr: "04:55 ص",
+                dhuhr: "12:07 م",
+                asr: "03:25 م",
+                maghrib: "05:54 م",
+                isha: "07:11 م"
+            };
+
+            document.getElementById("fajr-time").textContent = prayerTimes.fajr;
+            document.getElementById("dhuhr-time").textContent = prayerTimes.dhuhr;
+            document.getElementById("asr-time").textContent = prayerTimes.asr;
+            document.getElementById("maghrib-time").textContent = prayerTimes.maghrib;
+            document.getElementById("isha-time").textContent = prayerTimes.isha;
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

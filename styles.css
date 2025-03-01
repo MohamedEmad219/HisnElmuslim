@@ -1,0 +1,241 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Amiri', 'Reem Kufi', 'Scheherazade New', sans-serif;
+    text-decoration: none;
+}
+
+/* الوضع العادي */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+
+}
+
+/* الوضع الليلي */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+    direction: rtl;
+}
+
+/* الهيدر */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+/* زر الوضع الليلي */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+/* قسم الترحيب */
+.hero {
+    padding: 100px 20px;
+    background-image: url('WhatsApp\ Image\ 2025-03-01\ at\ 04.00.14_21532c45.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 250px;
+    font-size: 20px;
+
+}
+
+.hero p {
+    padding: 10px;
+}
+
+.hero button {
+    padding: 13px;
+    background-color: #1ab012;
+
+    width: 8rem;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.hero button a {
+    color: rgb(216, 214, 210);
+}
+
+/* المواقيت */
+.prayer-times {
+    padding-top: 150px;
+}
+
+.prayer-cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.prayer-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 120px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.prayer-card h3 {
+    font-size: 18px;
+    color: white;
+}
+
+.prayer-card p {
+    font-size: 16px;
+    color: #d4af37;
+}
+
+/* جعل الموقع متجاوب على جميع الشاشات */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .prayer-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prayer-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: row;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-top: 150px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero button {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+
+    .prayer-card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero button {
+        font-size: 14px;
+        padding: 7px 12px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .header {
+        padding: 10px 15px;
+    }
+
+    .prayer-cards {
+        flex-direction: column;
+    }
+
+    .prayer-card {
+        width: 95%;
+    }
+
+    .prayer-times h2 {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 402px) {
+    .nav-links {
+        padding: 0;
+    }
+
+    .hero .main {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أذكار المسلم - حصن المسلم</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Reem+Kufi:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* استايل عام */
+        body {
+            font-family: 'Amiri', 'Reem Kufi', 'Scheherazade New', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        /* وضع الداكن */
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+
+        /* الهيدر */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            z-index: 1000;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+
+        /* زر الوضع الليلي */
+        #theme-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            display: inline-block;
+        }
+
+        body.dark-mode .theme-toggle {
+            background: white;
+            color: black;
+        }
+
+        /* الحاوية */
+        .mainly {
+            width: 90%;
+            max-width: 800px;
+            margin: 120px auto;
+            text-align: center;
+        }
+
+        /* صندوق الأذكار */
+        .zikr-box {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            text-align: right;
+        }
+
+        body.dark-mode .zikr-box {
+            background: #333;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        .zikr-box h2 {
+            color: #d4a017;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        body.dark-mode .zikr-box h2 {
+            color: gold;
+        }
+
+        .zikr-box p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                flex-direction: row;
+                text-align: center;
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body onload="checkTheme()">
+
+    <!-- الهيدر -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">حصن المسلم</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="prayer-times.html">مواقيت الصلاة</a></li>
+                    <li><a href="azkar.html">الأذكار</a></li>
+                    <li><a href="quran-tracker.html">ختمة القرآن</a></li>
+                    <li><a href="drive-file.html"> نوت بوك </a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle">🌓</button>
+        </div>
+    </header>
+
+    <!-- الحاوية الرئيسية -->
+    <div class="mainly">
+
+        <!-- أذكار الصباح -->
+        <div class="zikr-box">
+            <h2>أذكار الصباح</h2>
+            <p>
+                1- آية الكرسي <br>
+                2- سورة الإخلاص (٣ مرات)<br>
+                3- سورة الفلق (٣ مرات)<br>
+                4- سورة الناس (٣ مرات)<br>
+                5- أصبحنا وأصبح الملك لله<br>
+                6- اللهم بك أصبحنا وبك أمسينا<br>
+                7- اللهم إني أسألك العافية في الدنيا والآخرة<br>
+                8- اللهم إني أسألك خير هذا اليوم<br>
+                9- اللهم إني أعوذ بك من الكفر والفقر<br>
+                10- سبحان الله وبحمده (١٠٠ مرة)<br>
+                11- لا إله إلا الله وحده لا شريك له (١٠ مرات)<br>
+                12- يا حي يا قيوم برحمتك أستغيث<br>
+                13- اللهم صل وسلم على نبينا محمد (١٠ مرات)<br>
+                14- حسبي الله لا إله إلا هو عليه توكلت<br>
+                15- بسم الله الذي لا يضر مع اسمه شيء
+            </p>
+        </div>
+
+        <!-- أذكار المساء -->
+        <div class="zikr-box">
+            <h2>أذكار المساء</h2>
+            <p>
+                1- آية الكرسي <br>
+                2- سورة الإخلاص (٣ مرات)<br>
+                3- سورة الفلق (٣ مرات)<br>
+                4- سورة الناس (٣ مرات)<br>
+                5- أمسينا وأمسى الملك لله<br>
+                6- اللهم بك أمسينا وبك أصبحنا<br>
+                7- اللهم إني أسألك العافية في الدنيا والآخرة<br>
+                8- اللهم إني أسألك خير هذه الليلة<br>
+                9- اللهم إني أعوذ بك من الكسل وسوء الكبر<br>
+                10- سبحان الله وبحمده (١٠٠ مرة)<br>
+                11- لا إله إلا الله وحده لا شريك له (١٠ مرات)<br>
+                12- يا حي يا قيوم برحمتك أستغيث<br>
+                13- اللهم صل وسلم على نبينا محمد (١٠ مرات)<br>
+                14- حسبي الله لا إله إلا هو عليه توكلت<br>
+                15- بسم الله الذي لا يضر مع اسمه شيء
+            </p>
+        </div>
+
+        <!-- أدعية رمضانية -->
+        <div class="zikr-box">
+            <h2>أدعية رمضانية</h2>
+            <p>
+                1- اللهم بلغنا رمضان وبارك لنا فيه<br>
+                2- اللهم إني أسألك العفو والعافية<br>
+                3- اللهم إنك عفو تحب العفو فاعفُ عني<br>
+                4- اللهم اجعلنا من عتقائك من النار في هذا الشهر الكريم<br>
+                5- اللهم تقبل صيامنا وقيامنا<br>
+                6- اللهم اجعل القرآن ربيع قلوبنا<br>
+                7- اللهم اغفر لنا ولوالدينا<br>
+                8- اللهم اجعلنا من المقبولين<br>
+                9- اللهم اجعلنا من المتوكلين عليك<br>
+                10- اللهم اجعلنا من عبادك الصالحين<br>
+                11- اللهم اغفر لنا ذنوبنا<br>
+                12- اللهم ارزقنا حسن الخاتمة<br>
+                13- اللهم افتح لنا أبواب رحمتك<br>
+                14- اللهم اجعلنا من الذاكرين لك كثيرًا<br>
+                15- اللهم ارزقنا ليلة القدر
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+        themeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+        });
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+            let isDark = document.body.classList.contains("dark-mode");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+            updateButton();
+        }
+
+        function checkTheme() {
+            let theme = localStorage.getItem("theme");
+            if (theme === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+            updateButton();
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'enabled');
+                themeToggle.textContent = '☀️';
+            } else {
+                localStorage.setItem('dark-mode', 'disabled');
+                themeToggle.textContent = '🌙';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
